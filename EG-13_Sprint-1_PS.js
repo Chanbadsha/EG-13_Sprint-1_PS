@@ -2,16 +2,34 @@ function isLeapYear(year) {
   if (year % 4 == 0) {
     if (year % 100 == 0) {
       if (year % 400 == 0) {
-        console.log("Leap year");
+        return true;
       } else {
-        console.log("Not a leap year");
+        return false;
       }
     } else {
-      console.log("Leap year");
+      return true;
     }
   } else {
-    console.log("Not a leap year");
+    return false;
   }
 }
 
-isLeapYear(2000);
+console.log(isLeapYear(2000));
+
+function generateFibonacci(n) {
+  const fibonacci = [];
+
+  for (let i = 0; i < n; i++) {
+    if (i === 0) {
+      fibonacci.push(0);
+    } else if (i === 1) {
+      fibonacci.push(1);
+    } else {
+      fibonacci.push(fibonacci[i - 1] + fibonacci[i - 2]);
+    }
+  }
+
+  return fibonacci;
+}
+
+console.log(generateFibonacci(7));
