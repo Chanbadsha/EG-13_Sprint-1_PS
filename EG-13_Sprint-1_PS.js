@@ -42,7 +42,7 @@ function findGCD(a, b) {
     x = b;
   }
 
-  for (let i = x; i >= 0; i--) {
+  for (let i = x; i >= 1; i--) {
     if (a % i == 0) {
       if (b % i == 0) {
         return i;
@@ -52,3 +52,19 @@ function findGCD(a, b) {
 }
 
 console.log(findGCD(30, 10));
+
+function findLCM(a, b) {
+  function findGCD(x, y) {
+    while (y !== 0) {
+      let remainder = x % y;
+      x = y;
+      y = remainder;
+    }
+
+    return x;
+  }
+
+  return Math.abs(a * b) / findGCD(a, b);
+}
+
+console.log(findLCM(12, 18));
