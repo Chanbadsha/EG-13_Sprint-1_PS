@@ -110,3 +110,64 @@ function mergeSortedArrays(arr1, arr2) {
 }
 
 console.log(mergeSortedArrays([1, 3, 5, 2], [2, 4, 6, 8]));
+
+function findMedian(nums) {
+  const sortedNums = [...nums].sort((a, b) => a - b);
+
+  const middle = Math.floor(sortedNums.length / 2);
+
+  if (sortedNums.length % 2 !== 0) {
+    return sortedNums[middle];
+  }
+
+  return (sortedNums[middle - 1] + sortedNums[middle]) / 2;
+}
+
+console.log(findMedian([7, 1, 3, 4, 9]));
+
+function findSecondLargest(nums) {
+  let largest = -Infinity;
+  let secondLargest = -Infinity;
+
+  for (const num of nums) {
+    if (num > largest) {
+      secondLargest = largest;
+      largest = num;
+    } else if (num > secondLargest && num !== largest) {
+      secondLargest = num;
+    }
+  }
+
+  return secondLargest === -Infinity ? null : secondLargest;
+}
+
+console.log(findSecondLargest([10, 20, 4, 45, 99, 99]));
+
+function findMode(arr) {
+  const frequency = {};
+  let mode = null;
+  let maxCount = 0;
+
+  for (const item of arr) {
+    frequency[item] = (frequency[item] || 0) + 1;
+
+    if (frequency[item] > maxCount) {
+      maxCount = frequency[item];
+      mode = item;
+    }
+  }
+
+  return mode;
+}
+
+console.log(findMode([1, 3, 3, 2, 1, 3, 4]));
+
+function naturalSort(arr) {
+  return [...arr].sort((a, b) =>
+    a.localeCompare(b, undefined, {
+      numeric: true,
+    }),
+  );
+}
+
+console.log(naturalSort(["file10.txt", "file2.txt", "file1.txt"]));
