@@ -1,3 +1,4 @@
+// 1st Problem
 function isLeapYear(year) {
   if (year % 4 == 0) {
     if (year % 100 == 0) {
@@ -16,6 +17,7 @@ function isLeapYear(year) {
 
 // console.log(isLeapYear(2000));
 
+// 2nd Problem
 function generateFibonacci(n) {
   const fibonacci = [];
 
@@ -34,6 +36,7 @@ function generateFibonacci(n) {
 
 // console.log(generateFibonacci(7));
 
+// 3rd Problem
 function findGCD(a, b) {
   let x = 0;
   if (b > a) {
@@ -53,6 +56,7 @@ function findGCD(a, b) {
 
 // console.log(findGCD(30, 10));
 
+// 4th Problem
 function findLCM(a, b) {
   function findGCD(x, y) {
     while (y !== 0) {
@@ -69,6 +73,7 @@ function findLCM(a, b) {
 
 // console.log(findLCM(12, 18));
 
+// 5th Problem
 function isPrime(num) {
   for (i = 2; i < num; i++) {
     if (num % i == 0) {
@@ -79,8 +84,9 @@ function isPrime(num) {
   }
 }
 
-console.log(isPrime(23));
+// console.log(isPrime(23));
 
+// 6th Problem
 function mergeSortedArrays(arr1, arr2) {
   const result = [];
   let i = 0;
@@ -109,8 +115,9 @@ function mergeSortedArrays(arr1, arr2) {
   return result;
 }
 
-console.log(mergeSortedArrays([1, 3, 5, 2], [2, 4, 6, 8]));
+// console.log(mergeSortedArrays([1, 3, 5, 2], [2, 4, 6, 8]));
 
+// 7th Problem
 function findMedian(nums) {
   const sortedNums = [...nums].sort((a, b) => a - b);
 
@@ -123,8 +130,9 @@ function findMedian(nums) {
   return (sortedNums[middle - 1] + sortedNums[middle]) / 2;
 }
 
-console.log(findMedian([7, 1, 3, 4, 9]));
+// console.log(findMedian([7, 1, 3, 4, 9]));
 
+// 8th Problem
 function findSecondLargest(nums) {
   let largest = -Infinity;
   let secondLargest = -Infinity;
@@ -141,8 +149,9 @@ function findSecondLargest(nums) {
   return secondLargest === -Infinity ? null : secondLargest;
 }
 
-console.log(findSecondLargest([10, 20, 4, 45, 99, 99]));
+// console.log(findSecondLargest([10, 20, 4, 45, 99, 99]));
 
+// 9Th Problem
 function findMode(arr) {
   const frequency = {};
   let mode = null;
@@ -160,8 +169,9 @@ function findMode(arr) {
   return mode;
 }
 
-console.log(findMode([1, 3, 3, 2, 1, 3, 4]));
+// console.log(findMode([1, 3, 3, 2, 1, 3, 4]));
 
+// 10Th Problem
 function naturalSort(arr) {
   return [...arr].sort((a, b) =>
     a.localeCompare(b, undefined, {
@@ -170,4 +180,4 @@ function naturalSort(arr) {
   );
 }
 
-console.log(naturalSort(["file10.txt", "file2.txt", "file1.txt"]));
+// console.log(naturalSort(["file10.txt", "file2.txt", "file1.txt"]));
