@@ -51,7 +51,7 @@ function findGCD(a, b) {
   }
 }
 
-console.log(findGCD(30, 10));
+// console.log(findGCD(30, 10));
 
 function findLCM(a, b) {
   function findGCD(x, y) {
@@ -67,4 +67,16 @@ function findLCM(a, b) {
   return Math.abs(a * b) / findGCD(a, b);
 }
 
-console.log(findLCM(12, 18));
+// console.log(findLCM(12, 18));
+
+function isPrime(num) {
+  for (i = 2; i < num; i++) {
+    if (num % i == 0) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+}
+
+console.log(isPrime(23));
