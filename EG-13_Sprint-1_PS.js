@@ -14,7 +14,7 @@ function isLeapYear(year) {
   }
 }
 
-console.log(isLeapYear(2000));
+// console.log(isLeapYear(2000));
 
 function generateFibonacci(n) {
   const fibonacci = [];
@@ -32,4 +32,23 @@ function generateFibonacci(n) {
   return fibonacci;
 }
 
-console.log(generateFibonacci(7));
+// console.log(generateFibonacci(7));
+
+function findGCD(a, b) {
+  let x = 0;
+  if (b > a) {
+    x = a;
+  } else {
+    x = b;
+  }
+
+  for (let i = x; i >= 0; i--) {
+    if (a % i == 0) {
+      if (b % i == 0) {
+        return i;
+      }
+    }
+  }
+}
+
+console.log(findGCD(30, 10));
